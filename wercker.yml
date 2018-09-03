@@ -1,0 +1,11 @@
+box: apiaryio/coreapp-ci:node-python-root
+
+build:
+  docker: true
+  steps:
+    - script:
+        name: Install grunt
+        code: npm install grunt
+    - internal/docker-build:
+        dockerfile: Dockerfile
+        image-name: test
