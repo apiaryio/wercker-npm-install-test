@@ -6,9 +6,9 @@ build:
     - script:
         name: Install grunt
         code: npm install grunt
+    - script:
+        name: docker-compose build
+        code: docker-compose build --no-cache || true
     - internal/docker-build:
         dockerfile: Dockerfile
         image-name: test
-    - script:
-        name: docker-compose build
-        code: docker-compose build --no-cache
