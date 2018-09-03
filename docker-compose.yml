@@ -1,4 +1,4 @@
-version: '2.0'
+version: '3.4'
 
 services:
   test:
@@ -6,3 +6,4 @@ services:
     stdin_open: true
     build:
       context: .
+      network: $DOCKER_NETWORK_NAME
