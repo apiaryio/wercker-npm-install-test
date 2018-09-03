@@ -1,0 +1,8 @@
+version: '2.0'
+
+services:
+  test:
+    tty: true
+    stdin_open: true
+    build:
+      context: .
