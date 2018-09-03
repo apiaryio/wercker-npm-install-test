@@ -8,7 +8,10 @@ build:
         code: npm install grunt
     - script:
         name: docker-compose build
-        code: docker-compose build --no-cache || true
+        code: docker-compose build --no-cache
+    - script:
+        name: docker build (native)
+        code: docker build --no-cache -t test .
     - internal/docker-build:
         dockerfile: Dockerfile
         image-name: test
